@@ -1,3 +1,6 @@
+//  link : https://www.codechef.com/problems/SNSOCIAL
+
+
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
