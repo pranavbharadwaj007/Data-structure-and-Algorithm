@@ -7,6 +7,7 @@ int subarr(vector<int> &v,int n){
     for(int i=1;i<n;i++){
         maxend=max(maxend+v[i],v[i]);
         res=max(res,maxend);
+	    //kadane
     }
     return res;
 }
