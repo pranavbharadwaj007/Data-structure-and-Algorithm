@@ -1,7 +1,7 @@
 
 // Link : https://leetcode.com/problems/find-pivot-index/
-// O(n) time and space
 
+// O(n) time and space
 class Solution {
 public:
     int pivotIndex(vector<int>& nums) {
