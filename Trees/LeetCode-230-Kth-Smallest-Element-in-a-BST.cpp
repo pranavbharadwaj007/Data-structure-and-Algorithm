@@ -1,3 +1,7 @@
+
+
+// Iterative
+
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
@@ -22,5 +26,31 @@ public:
             
         }
         return -1;
+    }
+};
+
+// recursive
+
+class Solution {
+public:
+    int count = 0;
+    int res = -1;
+    void helper( TreeNode* root, int k){
+        if( root != NULL){
+            if( res != -1) return;
+            helper( root->left,k);
+            count++;
+            if( count == k){
+                res = root->val;
+                return;
+            }
+            
+            helper(root->right,k);
+        }
+    }
+    int kthSmallest(TreeNode* root, int k) {
+        
+        helper(root,k);
+        return res;
     }
 };
