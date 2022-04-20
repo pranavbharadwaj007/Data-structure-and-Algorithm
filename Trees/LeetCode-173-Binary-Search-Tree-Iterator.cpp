@@ -1,5 +1,12 @@
+// Link : https://leetcode.com/problems/binary-search-tree-iterator/
+
 class BSTIterator {
-private: stack<TreeNode*>st;
+private:
+    stack<TreeNode*>st;
+    void pushAll(TreeNode* node){
+       for(;node!=NULL;st.push(node),node=node->left){  
+              }
+        }
 public:
     BSTIterator(TreeNode* root) {
         pushAll(root);
@@ -15,10 +22,4 @@ public:
     bool hasNext() {
         return !st.empty();
     }
-    private: 
-    void pushAll(TreeNode* node){
-            for(;node!=NULL;st.push(node),node=node->left){
-                        
-           }
-        }
 };
